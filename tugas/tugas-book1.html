@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Class</title>
+</head>
+<body>
+    <p>Ini adalah contoh class pada javascript.</p>
+    <p id="hasil"></p>
+    <script>
+        class Buku {            
+            constructor (id, judulBuku, namaPengarang) {
+                this.id = id;
+                this.judulBuku = judulBuku;
+                this.namaPengarang = namaPengarang;
+           
+               
+            }
+            get getId() {
+                return this.id;
+            }
+            get getJudulBuku() {
+                return this.judulBuku;
+            }
+            get getNamaPengarang() {
+                return this.namaPengarang;
+            }
+         
+            tampil = () => {
+                return this.getNamaPengarang;
+            }
+        }
+        
+        objBook1 = new Buku("001","Laskar Pelangi","Dedi");
+        const hasil = document.getElementById("hasil");
+        let dataBook1 = 
+        "ID = " + objBook1.getId + "<br>" +
+        "Judul Buku = " + objBook1.getJudulBuku + "<br>" +
+        "Nama Pengarang = " + objBook1.getNamaPengarang + "<br>" 
+
+        objBook2 = new Buku("002","Ayam Jago","Nia");
+        let dataBook2 = 
+        "ID = " + objBook2.getId + "<br>" +
+        "Judul Buku = " + objBook2.getJudulBuku + "<br>" +
+        "Nama Pengarang = " + objBook2.getNamaPengarang + "<br>" 
+
+        hasil.innerHTML = dataBook1  + dataBook2;
+        alert(objBook1.tampil());
+        
+    </script>
+</body>
+</html>

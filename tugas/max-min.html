@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="hasil"></div>
+    <script>
+        let angka = [45,75,86,66,44,89];
+      let hasil = document.getElementById("hasil");
+      let nilai_max= Math.max(...angka);
+      let nilai_min = Math.min(...angka);
+      hasil.innerHTML = "angka array = " + angka + "<br>nilai max = " + nilai_max +" dan nilai min = "+ nilai_min;
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let orang ={
+            namaDepan : "Dedi",
+            namaBelakang : "irawan",
+            warnaMata : "biru",
+            namaLengkap : function(){
+                return this.namaDepan + " "+ this.namaBelakang;
+            }
+        };
+        document.getElementById("namaLengkap").innerHTML = orang.namaLengkap();
+        console.log(orang.namaBelakang());
+
+        //merubah object menjadi array
+        let arrayOrang = object.values(orang);
+        document.getElementById("dataarray").innerHTML = arrayOrang;
+    </script>
+</body>
+</html>

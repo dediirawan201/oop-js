@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buku tugas - 2 </title>
+</head>
+<body>
+    <p id="hasil"></p>
+    <script>
+        class Buku {
+            constructor(judulBuku,pengarang) {
+                this.namaBuku = judulBuku;
+                this.namaPengarang = pengarang
+            }
+            tampilkan() {
+                return "judul buku saya adalah " + this.namaBuku;
+            }
+        }
+        class Model extends Buku {
+            constructor(judulBuku, pengarang) {
+                super(judulBuku);
+                this.namaPengarang = pengarang;
+            }
+            show() {
+                return this.tampilkan() + ", dengan pengarang " + this.namaPengarang;
+            }
+        }
+
+        let bukuku = new Model ("Laskar pelangi", "dedi");
+        let bukuku2 = new Buku("Laskar pelangi");
+        document.getElementById("hasil").innerHTML = bukuku.show();
+    </script>
+</body>
+</html>

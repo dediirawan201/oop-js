@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hasil"></p>
+    <p id="hasil2"></p>
+    <script>
+        //cara mendifinisakn object
+        let orang ={
+            namaDepan : "Dedi",
+            namaBelakang : "irawan",
+            warnaMata : "biru"
+        }
+        orang.kebangsaan = "indonesia";
+        delete orang.warnaMata; //menghapus propserti
+        const hasil  = document.getElementById("hasil")
+        hasil.innerHTML = "nama lengkap : " + orang.namaDepan +
+        " " +orang.namaBelakang + "<br>kebangsaan :" + orang.kebangsaan
+
+//cara mengkases object via loop
+let pesan = "";
+let id;
+for(id in orang){
+    pesan = pesan + orang[id] + " ";
+    console.log("id = " + id);
+}
+//cara lain mengakses properti object
+console.log(orang["namaDepan"])
+const hasil2 = document.getElementById(}hasil2)
+hasil2.innerHTML = pesan;
+    </script>
+</body>
+</html>
